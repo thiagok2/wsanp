@@ -16,8 +16,8 @@ public class WebServiceClient {
         FileTransfererImplService client = new FileTransfererImplService();
         FileTransfererImpl service = client.getFileTransfererImplPort();
          
-        String fileName = "ceesp_-_1_a_73879.zip";
-        String filePath = "/home/thiago/desenv/misc/" + fileName;
+        String fileName = "test-upload.zip";
+        String filePath = "D:/desenv/MISC/" + fileName;
         File file = new File(filePath);
          
         // uploads a file
@@ -36,8 +36,8 @@ public class WebServiceClient {
         }      
          
         // downloads another file
-        fileName = "api.postman_collection.json";
-        filePath = "/home/thiago/desenv/misc/temp/" + fileName;
+        fileName = "test-download.zip";
+        filePath = "D:/desenv/MISC/downloads/" + fileName;
         byte[] fileBytes = service.download(fileName);
          
         try {

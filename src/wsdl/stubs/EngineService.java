@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "EngineService", targetNamespace = "http://tempuri.org/", wsdlLocation = "file:/home/thiago/desenv/eclipse-workspace/AnpWs/engine_service.wsdl")
+@WebServiceClient(name = "EngineService", targetNamespace = "http://tempuri.org/", wsdlLocation = "https://engine-externo.hml.anp.gov.br/engine_service.svc?singleWsdl")
 public class EngineService
     extends Service
 {
@@ -30,7 +30,7 @@ public class EngineService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("file:/home/thiago/desenv/eclipse-workspace/AnpWs/engine_service.wsdl");
+            url = new URL("https://engine-externo.hml.anp.gov.br/engine_service.svc?singleWsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

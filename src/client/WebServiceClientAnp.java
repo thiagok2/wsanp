@@ -19,8 +19,8 @@ public class WebServiceClientAnp {
 		
 
 		try {
-			String fileName = "teste.zip";
-			String filePath = "/home/thiago/desenv/misc/" + fileName;
+			String fileName = "anp.zip";
+			String filePath = "D:/desenv/MISC/" + fileName;
 			File file = new File(filePath);
 			FileInputStream fis = new FileInputStream(file);
 			BufferedInputStream inputStream = new BufferedInputStream(fis);

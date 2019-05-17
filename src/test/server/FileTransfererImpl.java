@@ -17,7 +17,7 @@ public class FileTransfererImpl implements FileTransferer{
 	@Override
 	public void upload(String fileName, byte[] imageBytes) {
 		
-		String filePath = "/home/thiago/desenv/misc/temp/" + fileName;
+		String filePath = "D:/desenv/MISC/uploads/" + fileName;
          
         try {
             FileOutputStream fos = new FileOutputStream(filePath);
@@ -28,7 +28,7 @@ public class FileTransfererImpl implements FileTransferer{
             System.out.println("Received file: " + filePath);
              
         } catch (IOException ex) {
-            System.err.println(ex);
+        	ex.printStackTrace();
             throw new WebServiceException(ex);
         }
 		
@@ -36,7 +36,7 @@ public class FileTransfererImpl implements FileTransferer{
 
 	@WebMethod
     public byte[] download(String fileName) {
-        String filePath = "/home/thiago/desenv/misc/" + fileName;
+        String filePath = "D:/desenv/MISC/" + fileName;
         System.out.println("Sending file: " + filePath);
          
         try {
@@ -49,7 +49,7 @@ public class FileTransfererImpl implements FileTransferer{
              
             return fileBytes;
         } catch (IOException ex) {
-            System.err.println(ex);
+            ex.printStackTrace();
             throw new WebServiceException(ex);
         }      
     }
